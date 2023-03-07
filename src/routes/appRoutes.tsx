@@ -16,21 +16,12 @@ import AlertPage from "../pages/component/AlertPage";
 import ButtonPage from "../pages/component/ButtonPage";
 import InstallationPage from "../pages/installation/InstallationPage";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
-
+// / <HomePage /> /
 const appRoutes: RouteType[] = [
   {
     index: true,
-    element: <HomePage />,
+    element:<DashboardIndex /> ,
     state: "home"
-  },
-  {
-    path: "/sale",
-    element: <InstallationPage />,
-    state: "Sale",
-    sidebarProps: {
-      displayText: "Sale",
-      icon: <FileDownloadOutlinedIcon />
-    }
   },
   {
     path: "/dashboard",
@@ -40,80 +31,99 @@ const appRoutes: RouteType[] = [
       displayText: "Dashboard",
       icon: <DashboardOutlinedIcon />
     },
-    child: [
-      {
-        index: true,
-        element: <DashboardIndex />,
-        state: "dashboard.index"
-      },
-      {
-        path: "/dashboard/default",
-        element: <DefaultPage />,
-        state: "dashboard.default",
-        sidebarProps: {
-          displayText: "Default"
-        },
-      },
-      {
-        path: "/dashboard/analytics",
-        element: <AnalyticsPage />,
-        state: "dashboard.analytics",
-        sidebarProps: {
-          displayText: "Analytic"
-        }
-      },
-      {
-        path: "/dashboard/saas",
-        element: <SaasPage />,
-        state: "dashboard.saas",
-        sidebarProps: {
-          displayText: "Saas"
-        }
-      }
-    ]
+    // child: [
+    //   {
+    //     index: true,
+    //     element: <DashboardIndex />,
+    //     state: "dashboard.index"
+    //   },
+    //   {
+    //     path: "/dashboard/default",
+    //     element: <DefaultPage />,
+    //     state: "dashboard.default",
+    //     sidebarProps: {
+    //       displayText: "Default"
+    //     },
+    //   },
+    //   {
+    //     path: "/dashboard/analytics",
+    //     element: <AnalyticsPage />,
+    //     state: "dashboard.analytics",
+    //     sidebarProps: {
+    //       displayText: "Analytic"
+    //     }
+    //   },
+    //   {
+    //     path: "/dashboard/saas",
+    //     element: <SaasPage />,
+    //     state: "dashboard.saas",
+    //     sidebarProps: {
+    //       displayText: "Saas"
+    //     }
+    //   }
+    // ]
   },
   {
-    path: "/component",
+    path: "/merchants",
     element: <ComponentPageLayout />,
-    state: "component",
+    state: "merchants",
     sidebarProps: {
-      displayText: "Components",
+      displayText: "Merchants",
       icon: <AppsOutlinedIcon />
     },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Alert"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Button"
-        }
-      }
-    ]
+    // child: [
+    //   {
+    //     path: "/component/alert",
+    //     element: <AlertPage />,
+    //     state: "component.alert",
+    //     sidebarProps: {
+    //       displayText: "Alert"
+    //     },
+    //   },
+    //   {
+    //     path: "/component/button",
+    //     element: <ButtonPage />,
+    //     state: "component.button",
+    //     sidebarProps: {
+    //       displayText: "Button"
+    //     }
+    //   }
+    // ]
   },
   {
-    path: "/documentation",
+    path: "/rdr",
     element: <DocumentationPage />,
-    state: "documentation",
+    state: "rdr",
     sidebarProps: {
-      displayText: "Documentation",
+      displayText: "RDR Alerts",
       icon: <ArticleOutlinedIcon />
     }
   },
   {
-    path: "/changelog",
+    path: "/ethoca",
     element: <ChangelogPage />,
-    state: "changelog",
+    state: "ethoca",
     sidebarProps: {
-      displayText: "Changelog",
+      displayText: "ETHOCA Alerts",
+      icon: <FormatListBulletedOutlinedIcon />
+    }
+  }
+  ,
+  {
+    path: "/chargebacks",
+    element: <ChangelogPage />,
+    state: "chargebacks",
+    sidebarProps: {
+      displayText: "Chargebacks",
+      icon: <FormatListBulletedOutlinedIcon />
+    }
+  },
+  {
+    path: "/users",
+    element: <ChangelogPage />,
+    state: "users",
+    sidebarProps: {
+      displayText: "Users",
       icon: <FormatListBulletedOutlinedIcon />
     }
   }
