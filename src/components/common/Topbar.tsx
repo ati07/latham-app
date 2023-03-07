@@ -3,11 +3,11 @@ import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import colorConfigs from "../../configs/colorConfigs";
 import sizeConfigs from "../../configs/sizeConfigs";
 import MenuIcon from '@mui/icons-material/Menu';
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSidebar } from "../../redux/features/appState/appStateSlice";
 import { RootState } from '../../redux/app/store'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 const drawerWidth = 240;
 
 interface AppBarProps extends MuiAppBarProps {
@@ -33,9 +33,9 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const Topbar = () => {
-  const {sidebar} = useSelector((state: RootState)=>state.appState)
+  const { sidebar } = useSelector((state: RootState) => state.appState)
   const dispatch = useDispatch();
-  const handleDrawerOpen =()=>{
+  const handleDrawerOpen = () => {
     dispatch(setSidebar(true))
   }
   return (
@@ -49,8 +49,8 @@ const Topbar = () => {
         color: colorConfigs.topbar.color
       }}
     >
-      <Toolbar>
-          {/* <IconButton
+      <Toolbar style={{display: 'flex',justifyContent: 'space-between'}}>
+        {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -59,10 +59,11 @@ const Topbar = () => {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography variant="h6" noWrap component="div">
-            <img width='200px' height='50px' src='https://cdn-ieoom.nitrocdn.com/XrlcMEpKXkhpdcpugCgoCveHYaewvcpt/assets/images/optimized/wp-content/uploads/2023/02/89eb4cc10ad56b9f8ebe49674fb8b343.LogoCharge-1.svg' alt='img'/>
-          </Typography>
-        </Toolbar>
+        <Typography variant="h6" noWrap component="div">
+          <img width='200px' height='50px' src='https://cdn-ieoom.nitrocdn.com/XrlcMEpKXkhpdcpugCgoCveHYaewvcpt/assets/images/optimized/wp-content/uploads/2023/02/89eb4cc10ad56b9f8ebe49674fb8b343.LogoCharge-1.svg' alt='img' />
+        </Typography>
+        <LogoutOutlinedIcon />
+      </Toolbar>
     </AppBar>
   );
 };

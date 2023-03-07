@@ -16,6 +16,7 @@ import AlertPage from "../pages/component/AlertPage";
 import ButtonPage from "../pages/component/ButtonPage";
 import InstallationPage from "../pages/installation/InstallationPage";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
+import ComingSoon from "../assets/ComingSoon";
 // / <HomePage /> /
 const appRoutes: RouteType[] = [
   {
@@ -65,7 +66,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/merchants",
-    element: <ComponentPageLayout />,
+    element: <ComingSoon />,
     state: "merchants",
     sidebarProps: {
       displayText: "Merchants",
@@ -92,7 +93,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/rdr",
-    element: <DocumentationPage />,
+    element: <ComingSoon />,
     state: "rdr",
     sidebarProps: {
       displayText: "RDR Alerts",
@@ -101,7 +102,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/ethoca",
-    element: <ChangelogPage />,
+    element: <ComingSoon />,
     state: "ethoca",
     sidebarProps: {
       displayText: "ETHOCA Alerts",
@@ -111,7 +112,7 @@ const appRoutes: RouteType[] = [
   ,
   {
     path: "/chargebacks",
-    element: <ChangelogPage />,
+    element: <ComingSoon />,
     state: "chargebacks",
     sidebarProps: {
       displayText: "Chargebacks",
@@ -120,7 +121,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/users",
-    element: <ChangelogPage />,
+    element: <ComingSoon />,
     state: "users",
     sidebarProps: {
       displayText: "Users",
