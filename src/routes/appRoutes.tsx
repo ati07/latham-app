@@ -1,11 +1,5 @@
-import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
 import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
-import DefaultPage from "../pages/dashboard/DefaultPage";
-import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import ChangelogPage from "../pages/changelog/ChangelogPage";
-import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
-import SaasPage from "../pages/dashboard/SaasPage";
 import ComponentPageLayout from "../pages/component/ComponentPageLayout";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
@@ -17,52 +11,27 @@ import ButtonPage from "../pages/component/ButtonPage";
 import InstallationPage from "../pages/installation/InstallationPage";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
 import ComingSoon from "../assets/ComingSoon";
+import DashboardPage from "../pages/dashboard/DashboardPage";
+import PeopleIcon from '@mui/icons-material/People';
+import CircleNotificationsOutlinedIcon from '@mui/icons-material/CircleNotificationsOutlined';
+import CrisisAlertOutlinedIcon from '@mui/icons-material/CrisisAlertOutlined';
+import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 // / <HomePage /> /
 const appRoutes: RouteType[] = [
   {
     index: true,
-    element:<DashboardIndex /> ,
+    element:<DashboardPage /> ,
     state: "home"
   },
   {
     path: "/dashboard",
-    element: <DashboardPageLayout />,
+    element: <DashboardPage />,
     state: "dashboard",
     sidebarProps: {
       displayText: "Dashboard",
       icon: <DashboardOutlinedIcon />
     },
-    // child: [
-    //   {
-    //     index: true,
-    //     element: <DashboardIndex />,
-    //     state: "dashboard.index"
-    //   },
-    //   {
-    //     path: "/dashboard/default",
-    //     element: <DefaultPage />,
-    //     state: "dashboard.default",
-    //     sidebarProps: {
-    //       displayText: "Default"
-    //     },
-    //   },
-    //   {
-    //     path: "/dashboard/analytics",
-    //     element: <AnalyticsPage />,
-    //     state: "dashboard.analytics",
-    //     sidebarProps: {
-    //       displayText: "Analytic"
-    //     }
-    //   },
-    //   {
-    //     path: "/dashboard/saas",
-    //     element: <SaasPage />,
-    //     state: "dashboard.saas",
-    //     sidebarProps: {
-    //       displayText: "Saas"
-    //     }
-    //   }
-    // ]
   },
   {
     path: "/merchants",
@@ -70,26 +39,8 @@ const appRoutes: RouteType[] = [
     state: "merchants",
     sidebarProps: {
       displayText: "Merchants",
-      icon: <AppsOutlinedIcon />
+      icon: <PeopleIcon />
     },
-    // child: [
-    //   {
-    //     path: "/component/alert",
-    //     element: <AlertPage />,
-    //     state: "component.alert",
-    //     sidebarProps: {
-    //       displayText: "Alert"
-    //     },
-    //   },
-    //   {
-    //     path: "/component/button",
-    //     element: <ButtonPage />,
-    //     state: "component.button",
-    //     sidebarProps: {
-    //       displayText: "Button"
-    //     }
-    //   }
-    // ]
   },
   {
     path: "/rdr",
@@ -97,7 +48,7 @@ const appRoutes: RouteType[] = [
     state: "rdr",
     sidebarProps: {
       displayText: "RDR Alerts",
-      icon: <ArticleOutlinedIcon />
+      icon: <CircleNotificationsOutlinedIcon />
     }
   },
   {
@@ -106,7 +57,7 @@ const appRoutes: RouteType[] = [
     state: "ethoca",
     sidebarProps: {
       displayText: "ETHOCA Alerts",
-      icon: <FormatListBulletedOutlinedIcon />
+      icon: <CrisisAlertOutlinedIcon />
     }
   }
   ,
@@ -116,7 +67,7 @@ const appRoutes: RouteType[] = [
     state: "chargebacks",
     sidebarProps: {
       displayText: "Chargebacks",
-      icon: <FormatListBulletedOutlinedIcon />
+      icon: <CurrencyExchangeOutlinedIcon />
     }
   },
   {
@@ -125,7 +76,7 @@ const appRoutes: RouteType[] = [
     state: "users",
     sidebarProps: {
       displayText: "Users",
-      icon: <FormatListBulletedOutlinedIcon />
+      icon: <PermIdentityOutlinedIcon />
     }
   }
 ];

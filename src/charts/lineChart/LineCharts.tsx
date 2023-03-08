@@ -24,9 +24,7 @@ export default function Chart() {
   const theme = useTheme();
 
   return (
-    <React.Fragment>
-      {/* <Title>Today</Title> */}
-      <ResponsiveContainer>
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
           margin={{
@@ -35,6 +33,8 @@ export default function Chart() {
             bottom: 0,
             left: 24,
           }}
+          width={500}
+          height={300}
         >
           <XAxis
             dataKey="time"
@@ -66,6 +66,6 @@ export default function Chart() {
           />
         </LineChart>
       </ResponsiveContainer>
-    </React.Fragment>
+   
   );
 }

@@ -9,11 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
     "@leenguyen/react-flip-clock-countdown": "^1.4.0",
     "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.12",
     "@mui/x-data-grid-generator": "^6.0.0",
     "@mui/x-data-grid-pro": "^6.0.0",
     "@reduxjs/toolkit": "^1.9.3",
