@@ -30,10 +30,10 @@ import { initialRows } from './ChargebacksdefaultData';
 type Row = typeof initialRows[number];
 
 function Chargebacks() {
-    const [rows, setRows] = React.useState<Row[]>(initialRows);
+    const [rows, setRows] = React.useState<any>(initialRows);
     const [open, setOpen] = React.useState(false);
     const [disable, setDisable] = React.useState(false);
-    const [id, setId] = React.useState<any>('')
+    const [id, setId] = React.useState<any>(0)
     const dispatch = useDispatch()
     const [chargebacksData, setChargebacksData] = React.useState({
         merchant: '',
@@ -62,7 +62,7 @@ function Chargebacks() {
     };
     const handleDelete = (id: GridRowId) => {
         setTimeout(() => {
-            setRows((prevRows) => prevRows.filter((row) => row.id !== id));
+            setRows((prevRows:any) => prevRows.filter((row:any) => row.id !== id));
         });
         dispatch(closeDialogBox())
     }
@@ -171,7 +171,7 @@ function Chargebacks() {
     )
 
     const Save = () => {
-        if (id === '') {
+        if (id === 0) {
             setRows([
                 ...rows,
                 {
