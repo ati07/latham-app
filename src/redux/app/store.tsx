@@ -4,6 +4,7 @@ import { SnackBarSlice } from '../../redux/snackbar/snackbarSlice';
 import { DialogBoxSlice } from '../../redux/dialogBox/dialogboxSlice';
 import appStateSlice from "../features/appState/appStateSlice";
 import dashboardSlice from '../features/dashboard/dashboardSlice';
+import merchantSlice from '../features/merchant/merchantSlice';
 // ...
 
 export const store = configureStore({
@@ -14,6 +15,7 @@ export const store = configureStore({
     snackbar: SnackBarSlice.reducer,
     dialogBox: DialogBoxSlice.reducer,
     appState: appStateSlice,
+    merchantData:merchantSlice
     // comments: commentsReducer,
     // users: usersReducer,
   },

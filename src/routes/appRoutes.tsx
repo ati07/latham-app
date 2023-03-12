@@ -1,15 +1,5 @@
-import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
-import ComponentPageLayout from "../pages/component/ComponentPageLayout";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import AlertPage from "../pages/component/AlertPage";
-import ButtonPage from "../pages/component/ButtonPage";
-import InstallationPage from "../pages/installation/InstallationPage";
-import DocumentationPage from "../pages/documentation/DocumentationPage";
 import ComingSoon from "../assets/ComingSoon";
 import DashboardPage from "../pages/dashboard/DashboardPage";
 import PeopleIcon from '@mui/icons-material/People';
@@ -17,6 +7,10 @@ import CircleNotificationsOutlinedIcon from '@mui/icons-material/CircleNotificat
 import CrisisAlertOutlinedIcon from '@mui/icons-material/CrisisAlertOutlined';
 import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import MerchantsPage from "../pages/merchants/MerchantsPage";
+import RdrAlertPage from "../pages/rdrAlert/rdrAlertPage";
+import EthocaAlertPage from "../pages/ethocaAlert/EthocaAlertPage";
+import ChargebacksPage from "../pages/chargebacks/ChargebacksPage";
 // / <HomePage /> /
 const appRoutes: RouteType[] = [
   {
@@ -35,7 +29,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/merchants",
-    element: <ComingSoon />,
+    element: <MerchantsPage />,
     state: "merchants",
     sidebarProps: {
       displayText: "Merchants",
@@ -44,7 +38,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/rdr",
-    element: <ComingSoon />,
+    element: <RdrAlertPage />,
     state: "rdr",
     sidebarProps: {
       displayText: "RDR Alerts",
@@ -53,7 +47,7 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/ethoca",
-    element: <ComingSoon />,
+    element: <EthocaAlertPage />,
     state: "ethoca",
     sidebarProps: {
       displayText: "ETHOCA Alerts",
@@ -63,7 +57,7 @@ const appRoutes: RouteType[] = [
   ,
   {
     path: "/chargebacks",
-    element: <ComingSoon />,
+    element: <ChargebacksPage />,
     state: "chargebacks",
     sidebarProps: {
       displayText: "Chargebacks",

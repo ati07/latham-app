@@ -1,6 +1,8 @@
 import { useState } from 'react'
 // import './App.css'
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DialogBox from './assets/DialogBox';
+import SnackBarComponent from './assets/SnackBarComponent';
 import MainLayout from './components/layout/MainLayout';
 import { routes } from './routes';
 // import { appRoutes } from './routestes/routes';
@@ -14,6 +16,8 @@ function App() {
           {routes}
         </Route>
       </Routes>
+      <DialogBox />
+      <SnackBarComponent/>
     </BrowserRouter>
   )
 }

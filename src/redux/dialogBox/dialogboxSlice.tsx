@@ -6,8 +6,8 @@ type TypeDialogBox = {
     message: string,
     btnPrimaryText?: string,
     btnSecondaryText?: string,
-    primaryAction: () => any,
-    secondaryAction: () => any,
+    primaryAction: () => void,
+    secondaryAction: () => void,
 }
 
 let initialState: TypeDialogBox = {

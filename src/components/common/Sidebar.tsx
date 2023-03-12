@@ -105,7 +105,7 @@ const Sidebar = () => {
           >
             {/* <DrawerHeader> */}
               <IconButton onClick={handleDrawer}>
-                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                {theme.direction === 'ltr' && !sidebar ? <ChevronLeftIcon style={{color:'white'}}/> : <ChevronRightIcon style={{color:'white'}}/>}
               </IconButton>
             {/* </DrawerHeader> */}
             {/* <Avatar src={assets.images.logo} /> */}
