@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo } from 'react'
 import { Avatar, Box, Tooltip, Typography } from '@mui/material';
 import moment from 'moment';
-import MerchantsActions from './MerchantsActions';
 import {
     DataGrid,
     GridActionsCellItem,
