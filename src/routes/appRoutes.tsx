@@ -8,9 +8,10 @@ import CrisisAlertOutlinedIcon from '@mui/icons-material/CrisisAlertOutlined';
 import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import MerchantsPage from "../pages/merchants/MerchantsPage";
-import RdrAlertPage from "../pages/rdrAlert/rdrAlertPage";
+// import RdrAlertPage from "../pages/rdrAlert/rdrAlertPage";
 import EthocaAlertPage from "../pages/ethocaAlert/EthocaAlertPage";
 import ChargebacksPage from "../pages/chargebacks/ChargebacksPage";
+import RdrAlertPage from "../pages/rdrAlert/RdrAlertPage";
 // / <HomePage /> /
 const appRoutes: RouteType[] = [
   {
